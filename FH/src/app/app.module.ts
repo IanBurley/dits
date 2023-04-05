@@ -15,12 +15,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { firebaseConfig } from '../environments/environment';
+import { environment } from '../environments/environment';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 //import { ProfileComponent } from './components/profile/profile.component';
 //import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 
 
 
@@ -30,6 +31,8 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     HomeComponent,
     LoginComponent,
     AdminComponent,
+    SignUpComponent
+
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    provideFirebaseApp(() => initializeApp(firebaseConfig)),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
