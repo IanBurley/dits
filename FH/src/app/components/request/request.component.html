@@ -1,0 +1,20 @@
+<div>
+  <h2> Donation Request</h2>
+  <form [formGroup]="requestForm" type="submit">
+    <mat-form-field> <h3> Type</h3>
+      <select id="category" name="category">
+        <option value="">--Select a Category--</option>
+        <option value="furniture">Furniture</option>
+        <option value="hygiene">Hygiene</option>
+        <option value="food">Food</option>
+        <option value="home-goods">Home Goods</option>
+        <option value="other">Other</option>
+      </select>
+   </mat-form-field>
+    <br>
+    <mat-form-field> <h3>Notes</h3>
+      <input matInput type="string" placeholder="Enter notes" formControlName="notes" required>
+      </mat-form-field>
+  </form>
+  <button id="submit">SUBMIT</button>
+</div>

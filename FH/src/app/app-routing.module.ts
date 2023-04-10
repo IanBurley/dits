@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-
+import { RequestComponent } from './components/request/request.component';
 const routes: Routes = [{
   path: 'home',
   component: HomeComponent},
@@ -18,6 +18,10 @@ const routes: Routes = [{
   {
     path: 'signup',
     component: SignUpComponent
+  },
+  {
+    path: 'request',
+    component: RequestComponent
   }
   ];
 

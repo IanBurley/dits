@@ -22,6 +22,8 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 //import { ProfileComponent } from './components/profile/profile.component';
 //import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { RequestComponent } from './components/request/request.component';
+import { MatSelectModule } from '@angular/material/select'
 
 
 
@@ -31,7 +33,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     HomeComponent,
     LoginComponent,
     AdminComponent,
-    SignUpComponent
+    SignUpComponent,
+    RequestComponent
 
   ],
   imports: [
@@ -50,6 +53,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
+    MatSelectModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
