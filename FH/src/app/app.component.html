@@ -32,8 +32,8 @@
     <li *ngIf="(AuthenticationService.currentUser$ | async)">
       <a class="menu__item" href="/request">Request</a>
     </li>
-    <li *ngIf="AuthenticationService.currentUser$ | async as user">
-      <a class="menu__item" href="/admin">Admin</a>
+    <li *ngIf="(AuthenticationService.currentUser$ | async) as user">
+      <a class="menu__item" href="/admin" *ngIf="(AuthenticationService.getUserRole(user) | async) === 'admin'">Admin</a>
     </li>
     <li *ngIf="!(AuthenticationService.currentUser$ | async)">
       <a class="menu__item" href="/login">Login</a>

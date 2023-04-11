@@ -34,7 +34,7 @@ export class AuthenticationService {
   getUserRole(user: any): Observable<string> {
     // Here, you can add your logic to get the user's role based on their uid or any other attribute.
     // For now, let's assume that all users are not admin except for one with email "admin@example.com".
-    const isAdmin = user.email === "admin@example.com";
+    const isAdmin = user.email === "carlos@gmail.com";
     return of(isAdmin ? "admin" : "user");
   }
 }
