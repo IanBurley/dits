@@ -65,3 +65,11 @@ input {
 .no-outline:focus {
   outline: none;
 }
+.cont{
+  width:60%;
+  height:600px;
+  margin-right:auto;
+  margin-left:auto;
+  background-color:#757c81;
+  color:white;
+}

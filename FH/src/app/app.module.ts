@@ -24,6 +24,7 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { RequestComponent } from './components/request/request.component';
 import { MatSelectModule } from '@angular/material/select'
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
 
@@ -34,8 +35,7 @@ import { MatSelectModule } from '@angular/material/select'
     LoginComponent,
     AdminComponent,
     SignUpComponent,
-    RequestComponent
-
+    RequestComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,6 +57,7 @@ import { MatSelectModule } from '@angular/material/select'
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

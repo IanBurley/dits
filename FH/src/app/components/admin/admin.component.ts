@@ -3,57 +3,38 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+import { UsersService } from 'src/services/users.service';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { ApexGrid,ColumnConfiguration } from 'apex-grid';
+import { DonationRequest } from 'src/app/models/request.module';
 
-@NgModule({
-imports:	 [ BrowserModule,
-				FormsModule,
-				BrowserAnimationsModule,
-				MatButtonModule ],
-})
-export class AppModule { }
-
-
+import { tap} from 'rxjs'
+ApexGrid.register();
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  allrequest: DonationRequest[] = [];
+  gridcolumn: ColumnConfiguration<DonationRequest>[] = [
+    {key: 'type', type:'string',sort:true,filter:true},
+    {key: 'notes', type:'string',sort:true,filter:true},
+    {key: 'dateinserted', type:'string',sort:true,filter:true},
+  ]
+  constructor(private usersService:UsersService) { }
+  ngOnInit(){
+  this.usersService.getRequests().pipe(
+    tap((request) =>{
+      if(request){
+        console.log(request);
+        this.allrequest = request;
+      }
+    })
+  ).subscribe()
 
 }
-
-interface Item {
-  name: string;
-  category: string;
-  description: string;
 }
 
-const items: Item[] = [
-  {
-    name: "Chair",
-    category: "Furniture",
-    description: "A comfortable armchair with soft cushions."
-  },
-  {
-    name: "Toothbrush",
-    category: "Hygiene",
-    description: "A soft-bristled toothbrush for gentle cleaning."
-  },
-  {
-    name: "Canned Goods",
-    category: "Food",
-    description: "A variety of canned foods, including beans, vegetables, and fruit."
-  },
-  {
-    name: "Bedding",
-    category: "Home Goods",
-    description: "Soft and cozy bedding to keep you warm at night."
-  }
-];
