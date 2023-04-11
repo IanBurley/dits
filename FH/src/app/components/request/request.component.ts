@@ -27,7 +27,7 @@ request: DonationRequest = {type: '',notes: '',id:'',dateinserted:''};
 
   })
   ngOnInit(): void{
-   
+
   }
   types: RequestType[] = [
     {type: 'Furniture'},

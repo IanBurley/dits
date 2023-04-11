@@ -1,22 +1,21 @@
 .error-message {
-    position: relative;
-    display: inline-flex;
-    top: -20px;
-    left: 200px;
+  position: relative;
+  display: inline-flex;
+  top: -20px;
+  left: 200px;
 }
 .login{
-    text-align: center;
-    background-color: black;
-    width:40%;
-    margin-right: auto;
-    margin-left: auto;
-    color: white;
-    opacity: 0.9;
-    border-radius: 7005px;
-    justify-content: center;
-    padding: 25px;
+  text-align: center;
+  background-color: black;
+  width:40%;
+  margin-right: auto;
+  margin-left: auto;
+  color: white;
+  opacity: 0.9;
+  border-radius: 7005px;
+  justify-content: center;
+  padding: 25px;
 }
 .inputext{
-    color: white;
+  color: white;
 }
-
