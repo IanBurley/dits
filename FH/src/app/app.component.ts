@@ -14,12 +14,12 @@ export class AppComponent {
 
   constructor (
     private router: Router,
-    public AuthenticationService: AuthenticationService,
-    private Router: Router
+    public AuthenticationService: AuthenticationService
   ) {
     // Subscribe to currentUser$ observable and update user when the authentication state changes
     this.AuthenticationService.currentUser$.subscribe((user) => {
       this.user = user;
+      console.log('this.user: ', this.user);
     });
   }
 

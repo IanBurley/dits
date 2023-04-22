@@ -25,6 +25,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { RequestComponent } from './components/request/request.component';
 import { MatSelectModule } from '@angular/material/select'
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { DonationNeedsComponent } from './components/donationNeeds/donationNeeds.component';
 
 
 
@@ -32,6 +33,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   declarations: [
     AppComponent,
     HomeComponent,
+    DonationNeedsComponent,
     LoginComponent,
     AdminComponent,
     SignUpComponent,

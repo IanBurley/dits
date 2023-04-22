@@ -6,13 +6,13 @@ body {
   float: left;
   width: 50%;
   background-color: darkslategray;
-  color: floralwhite;
+  //color: floralwhite;
 }
 
 #findDetails {
   width: 50%;
-  background-color: rgb(255, 255, 255);
-  color: pink;
+  //background-color: rgb(255, 255, 255);
+  //color: pink;
   margin: 0 auto; /* center the div horizontally */
   text-align: center; /* center the contents of the div */
 }
@@ -42,7 +42,7 @@ select {
 
 button {
   background-color: #185788;
-  color: white;
+  //color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -59,7 +59,7 @@ input {
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: groove;
-  background-color: #eee;
+  //background-color: #eee;
 }
 
 .no-outline:focus {
@@ -70,5 +70,5 @@ input {
   height:600px;
   margin-right:auto;
   margin-left:auto;
-  color:white;
+  //color:white;
 }

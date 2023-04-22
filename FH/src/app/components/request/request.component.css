@@ -1,11 +1,12 @@
 
 .formbox{
+    margin-top: 30px;
     width:400px;
     height:500px;
     margin-right:auto;
     margin-left:auto;
     text-align:center;
-    background-color:pink;
+    background-color:#ffe1e6;
     border-radius:25px;
     justify-content:center;
     padding: 30px;
@@ -13,6 +14,10 @@
 .submit{
     background-color:black;
     color:white;
+}
+
+.submit:hover {
+  background-color: pink;
 }
 .type1{
     width:150px;

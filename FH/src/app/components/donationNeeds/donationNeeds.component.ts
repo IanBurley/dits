@@ -6,14 +6,13 @@ import { DonationRequest } from 'src/app/models/request.module';
 import { tap} from 'rxjs'
 ApexGrid.register();
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  selector: 'app-donationNeeds',
+  templateUrl: './donationNeeds.component.html',
+  styleUrls: ['./donationNeeds.component.scss']
 })
-export class AdminComponent implements OnInit {
+export class DonationNeedsComponent implements OnInit {
   allrequest: DonationRequest[] = [];
   gridcolumn: ColumnConfiguration<DonationRequest>[] = [
-    {key: 'requesterName', type:'string',sort:true,filter:true},
     {key: 'type', type:'string',sort:true,filter:true},
     {key: 'notes', type:'string',sort:true,filter:true},
     {key: 'dateinserted', type:'string',sort:true,filter:true},

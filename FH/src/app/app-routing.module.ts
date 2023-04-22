@@ -6,15 +6,24 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { RequestComponent } from './components/request/request.component';
-const routes: Routes = [{
-  path: 'home',
-  component: HomeComponent},
+import { DonationNeedsComponent } from './components/donationNeeds/donationNeeds.component';
+const routes: Routes = [
   {
-  path: 'login',
-  component: LoginComponent},
+    path: 'home',
+    component: HomeComponent
+  },
   {
-  path: 'admin',
-  component: AdminComponent},
+    path: 'donationNeeds',
+    component: DonationNeedsComponent
+  },
+  { 
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
+  },
   {
     path: 'signup',
     component: SignUpComponent
@@ -23,7 +32,7 @@ const routes: Routes = [{
     path: 'request',
     component: RequestComponent
   }
-  ];
+];
 
 
 @NgModule({

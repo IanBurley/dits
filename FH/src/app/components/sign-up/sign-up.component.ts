@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormControl,
-  FormGroup,
   ValidationErrors,
   ValidatorFn,
   Validators,
@@ -11,9 +10,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
-import { forkJoin } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { ProfileUser } from 'src/app/models/user.module';
 import { UsersService } from 'src/services/users.service';
 
 export function passwordsMatchValidator(): ValidatorFn {

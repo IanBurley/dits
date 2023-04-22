@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NonNullableFormBuilder, UntypedFormGroup } from '@angular/forms';
+import { FormControl, UntypedFormGroup } from '@angular/forms';
 import { HotToastService } from '@ngneat/hot-toast';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { switchMap, tap } from 'rxjs';
-import { UserProfile } from 'firebase/auth';
-import { ImageUploadService } from 'src/services/image-upload.service';
+import { tap } from 'rxjs';
 import { UsersService } from 'src/services/users.service';
-import { ProfileUser } from 'src/app/models/user.module';
 
 @UntilDestroy()
 @Component({
@@ -27,7 +24,6 @@ export class ProfileComponent implements OnInit {
   });
 
   constructor(
-    private imageUploadService: ImageUploadService,
     private toast: HotToastService,
     private usersService: UsersService
   ) {}
@@ -38,22 +34,6 @@ export class ProfileComponent implements OnInit {
       .subscribe((user) => {
         this.profileForm.patchValue({ ...user });
       });
-  }
-
-  uploadFile(event: any, { uid }: ProfileUser) {
-    this.imageUploadService
-      .uploadImage(event.target.files[0], `images/profile/${uid}`)
-
-        this.toast.observe({
-          loading: 'Uploading profile image...',
-          success: 'Image uploaded successfully',
-          error: 'There was an error in uploading the image',
-        }),
-        switchMap((photoURL) =>
-          this.usersService.updateUser({
-            uid,
-          })
-        )
   }
 
   saveProfile() {

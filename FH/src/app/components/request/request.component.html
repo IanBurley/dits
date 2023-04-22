@@ -1,27 +1,23 @@
-<h2> Donation Page</h2>
-  <div class="formbox">
-    <h2 style="text-align: center;"> Donation Request</h2>
+<div class="formbox">
+  <h2 style="text-align: center;"> Donation Request</h2>
   <form [formGroup]="requestForm" type="submit" class="form1">
-    <div class="test">
-     <h2>Enter Type</h2>
-     <br>
-    <mat-form-field>
+    <div>
+      <h2>Enter Type</h2>
+      <br>
+      <mat-form-field>
+        <select name="category" id="category" formControlName="requesttype" required class="type2">
+          <option>--Select Category--</option>
+          <option *ngFor="let types of types" [value]="types.type" class="type1">{{types.type}}</option>
+        </select>
+      </mat-form-field>
+      <br>
+      <h2>Enter notes</h2>
 
-      <select name="category" id="category" formControlName="requesttype" required class="type2">
-
-        <option>--Select Category--</option>
-        <option *ngFor="let types of types" [value]="types.type" class="type1">{{types.type}}</option>
-      </select>
-   </mat-form-field>
-   <br>
-   <h2>Enter notes</h2>
-
-   <mat-form-field>
-
-    <input mat-input type="string" formControlName="requestnotes" placeholder="Enter Notes" class="type1">
-   </mat-form-field>
+      <mat-form-field>
+        <input mat-input type="string" formControlName="requestnotes" placeholder="Enter Notes" class="type1">
+      </mat-form-field>
    </div>
    <button mat-raised-button type="submit" class="submit" (click)="clickSubmit()">Submit</button>
-   </form>
+  </form>
 </div>
 

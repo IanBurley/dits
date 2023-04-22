@@ -1,6 +1,7 @@
 export interface DonationRequest{
-  type: string,
-  notes: string,
-  dateinserted: string,
-  id: string
+  type: string;
+  notes: string;
+  requesterName: string;
+  dateinserted: string;
+  id: string;
 }

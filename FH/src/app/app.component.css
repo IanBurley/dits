@@ -90,3 +90,7 @@ mat-toolbar{
 .marginbutton{
   margin-left: auto;
 }
+
+.user-text {
+  color: whitesmoke;
+}

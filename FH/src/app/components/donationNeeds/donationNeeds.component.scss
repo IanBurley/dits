@@ -1,32 +1,20 @@
 body {
   text-align: center;
-  color: black;
-  background-color: pink;
-
-
-}
-div{
-  background-color: pink;
-
-}
-
-h1 {
-  margin-top: unset;
 }
 
 #enterDetails {
   float: left;
   width: 50%;
-  background-color: rgb(0, 0, 0);
-  color: floralwhite;
+  background-color: black;
+  //color: floralwhite;
 }
 
 #findDetails {
   width: 50%;
-  background-color: rgb(255, 255, 255);
-  color: darkslategray;
-  margin: 0 auto; /* center the div horizontally /
-  text-align: center; / center the contents of the div */
+  //background-color: rgb(255, 255, 255);
+  //color: pink;
+  margin: 0 auto; /* center the div horizontally */
+  text-align: center; /* center the contents of the div */
 }
 
 input {
@@ -54,7 +42,7 @@ select {
 
 button {
   background-color: #185788;
-  color: white;
+  //color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -71,9 +59,16 @@ input {
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: groove;
-  background-color: #eee;
+  //background-color: #eee;
 }
 
 .no-outline:focus {
   outline: none;
+}
+.cont{
+  width:60%;
+  height:600px;
+  margin-right:auto;
+  margin-left:auto;
+  //color:white;
 }

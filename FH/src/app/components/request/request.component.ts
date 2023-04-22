@@ -2,13 +2,14 @@ import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { tap} from 'rxjs'
 import { FormGroup,FormControl,Validators } from '@angular/forms';
-
 import { DonationRequest } from 'src/app/models/request.module';
 import {uuidv4} from '@firebase/util'
 import { UsersService } from 'src/services/users.service';
+
 interface RequestType{
-  type: string
+  type: string;
 }
+
 @Component({
   selector: 'app-request',
   templateUrl: './request.component.html',
@@ -19,7 +20,7 @@ export class RequestComponent implements OnInit{
   constructor(private usersService: UsersService,private router: Router){
 
   }
-request: DonationRequest = {type: '',notes: '',id:'',dateinserted:''};
+  request: DonationRequest = {type: '',notes: '',id:'',dateinserted:'', requesterName: ''};
   requestForm = new FormGroup({
     requesttype: new FormControl<string | null>(null,Validators.required),
     requestnotes: new FormControl('',Validators.required)
@@ -54,12 +55,14 @@ request: DonationRequest = {type: '',notes: '',id:'',dateinserted:''};
     this.user$.pipe(tap((user)=>{
 
       if(user){
-        console.log(user?.uid);
-
-      this.usersService.addRequest(this.request,user?.uid)
+        console.log('MUFFIN', user?.uid);
+        if (user.displayName) {
+          this.request.requesterName = user.displayName;
+        }
+        this.usersService.addRequest(this.request,user?.uid)
       }
     })).subscribe();
-    this.router.navigate(['/home']);
+    this.requestForm.reset();
   }
 
 }

@@ -52,18 +52,17 @@ export class UsersService {
     const ref = doc(this.firestore, 'users', user.uid);
     return from(updateDoc(ref, { ...user }));
   }
-   addRequest(request: DonationRequest,userid:string): Observable<void> {
-  
-        const ref = doc(this.firestore, 'users',userid);
-        const requestCollection = collection(ref,'requests');
-        const requestdoc = doc(requestCollection,request.id);
+
+  addRequest(request: DonationRequest,userid:string): Observable<void> {
+    const ref = doc(this.firestore, 'users',userid);
+    const requestCollection = collection(ref,'requests');
+    const requestdoc = doc(requestCollection,request.id);
     console.log('added successfully')
-        return from(setDoc(requestdoc,request));
-
-    ;
+    alert('Sucecssfully added request!');
+    return from(setDoc(requestdoc,request));
   }
-  getRequests(): Observable<DonationRequest[]>{
 
+  getRequests(): Observable<DonationRequest[]>{
       const coll = collectionGroup(this.firestore,'requests');
       console.log('testing');
       return collectionData(coll) as Observable<DonationRequest[]>;
