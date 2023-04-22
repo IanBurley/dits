@@ -12,7 +12,7 @@ body {
 #findDetails {
   width: 50%;
   background-color: rgb(255, 255, 255);
-  color: darkslategray;
+  color: pink;
   margin: 0 auto; /* center the div horizontally */
   text-align: center; /* center the contents of the div */
 }
@@ -70,6 +70,5 @@ input {
   height:600px;
   margin-right:auto;
   margin-left:auto;
-  background-color:#757c81;
   color:white;
 }

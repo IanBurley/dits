@@ -6,15 +6,15 @@
 }
 .login{
   text-align: center;
-  background-color: black;
+  background-color: pink;
   width:40%;
   margin-right: auto;
   margin-left: auto;
   color: white;
   opacity: 0.9;
-  border-radius: 7005px;
+  border-radius: 100px;
   justify-content: center;
-  padding: 25px;
+  padding: 50px;
 }
 .inputext{
   color: white;

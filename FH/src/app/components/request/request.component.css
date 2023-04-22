@@ -5,13 +5,13 @@
     margin-right:auto;
     margin-left:auto;
     text-align:center;
-    background-color:rgb(168, 162, 159);
+    background-color:pink;
     border-radius:25px;
     justify-content:center;
     padding: 30px;
 }
 .submit{
-    background-color:rgb(40, 40, 110);
+    background-color:black;
     color:white;
 }
 .type1{
