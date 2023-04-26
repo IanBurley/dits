@@ -16,7 +16,7 @@ const routes: Routes = [
     path: 'donationNeeds',
     component: DonationNeedsComponent
   },
-  { 
+  {
     path: 'login',
     component: LoginComponent
   },
@@ -42,3 +42,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

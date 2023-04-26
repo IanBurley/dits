@@ -30,3 +30,8 @@ export class DonationNeedsComponent implements OnInit {
 
 }
 }
+
+// Define the theme
+var theme = {
+  palette: 'palette1'
+};

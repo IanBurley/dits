@@ -1,96 +1,54 @@
-mat-toolbar{
-    justify-content: center;
-}
-
-.content {
-    padding: 32px;
-}
-mat-toolbar{
-  justify-content: space-between;
-}
-
-.content {
-  padding: 32px;
-}
-#menu__toggle {
-  opacity: 0;
-}
-#menu__toggle:checked + .menu__btn > span {
-  transform: rotate(45deg);
-}
-#menu__toggle:checked + .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0deg);
-}
-#menu__toggle:checked + .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-}
-#menu__toggle:checked ~ .menu__box {
-  left: 0 !important;
-}
-.menu__btn {
+.top-menu {
+  background-color: #333; /* Change this to your preferred background color */
   position: fixed;
-  top: 20px;
-  left: 20px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 3;
-}
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-  display: block;
-  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 2px;
-  background-color:black;
-  transition-duration: .25s;
+  z-index: 9999; /* Ensure the menu is always on top of other content */
 }
-.menu__btn > span::before {
-  content: '';
-  top: -8px;
-}
-.menu__btn > span::after {
-  content: '';
-  top: 8px;
-}
-.menu__box {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 300px;
-  height: 100%;
-  margin: 0;
-  padding: 80px 0;
-  list-style: none;
-  background-color: #69014a;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-  transition-duration: .25s;
-}
-.menu__item {
-  display: block;
-  padding: 12px 24px;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  transition-duration: .25s;
-}
-.menu__item:hover {
-  background-color: #CFD8DC;
-}
-.DITSTEXT{
-  margin-right: auto;
-  margin-left: auto;
-}
-.marginbutton{
-  margin-left: auto;
+.active-link {
+  color: #333;
+  background-color: rgb(23, 23, 23);
 }
 
-.user-text {
-  color: whitesmoke;
+
+.menu__box {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu__item {
+  text-decoration: none;
+  color: #fff; /* Change this to your preferred text color */
+  padding: 10px;
+  display: block;
+  font-size: 1rem; /* Change this to your preferred font size */
+}
+
+.menu__item:hover {
+  background-color: #555; /* Change this to your preferred hover color */
+}
+
+/* Optional styles to adjust the menu on smaller screens */
+@media (max-width: 768px) {
+  .menu__box {
+    flex-direction: column;
+  }
+
+  .menu__item {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+.user {
+  text-decoration: none;
+  color: pink; /* Change this to your preferred text color */
+  padding: 10px;
+  display: flex;
+  font-size: 1rem; /* Change this to your preferred font size */
+  justify-content: space-between;
 }
